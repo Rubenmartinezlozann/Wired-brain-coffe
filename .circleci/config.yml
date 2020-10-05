@@ -10,6 +10,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Which bundler?
-          command: bundle -v
+          name: saludos
+          command: echo hello world
+          
+      - run:
+          name: saludos
+          command: echo hello world
       - ruby/bundle-install
