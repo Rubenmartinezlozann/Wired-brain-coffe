@@ -1,19 +1,16 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
-
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.3-stretch-node
-    executor: ruby/default
+      - image: circleci/ruby:2.4.1-node-browsers
+      
     steps:
       - checkout
+      
       - run:
-          name: saludos
-          command: echo hello world
-          
+          name: Saludos
+          command: echo Hello, world.
+      
       - run:
-          name: Imprime la fecha actual
+          name: Imrprime la fecha actual
           command: date
-      - ruby/bundle-install
